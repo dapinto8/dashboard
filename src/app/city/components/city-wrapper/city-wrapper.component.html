@@ -1,0 +1,26 @@
+<div #cityWrapper class="city-wrapper" (mousedown)="mouseDownHandler($event)" (mousemove)="mouseMoveHandler($event)"
+  (mouseup)="mouseUpHandler($event)" (wheel)="mouseWheelHandler($event)">
+  <div #city class="city">
+    <a routerLink="/" class="link purchases animate__animated animate__fadeIn animate__delay-3s">
+      Compras
+      <span class="animated-badge">5</span>
+    </a>
+    <a routerLink="/" class="link crm animate__animated animate__fadeIn animate__delay-3s">
+      CRM
+      <span class="animated-badge">2</span>
+    </a>
+    <a routerLink="/" class="link warehouse animate__animated animate__fadeIn animate__delay-4s">
+      Almacén
+      <span class="animated-badge">6</span>
+    </a>
+    <a routerLink="/" class="link store animate__animated animate__fadeIn animate__delay-5s">
+      Tienda
+      <span class="animated-badge">1</span>
+    </a>
+    <button (click)="openModule('./Sales')" class="link sales animate__animated animate__fadeIn animate__delay-2s">
+      Ventas
+      <!-- <span class="animated-badge">3</span> -->
+    </button>
+    <app-city-isometric></app-city-isometric>
+  </div>
+</div>
