@@ -5,10 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class MainComponent implements OnInit {
+export class AppComponent implements OnInit {
   title = 'dashboard';
 
   ngOnInit() {
+    const run = async () => {
+      console.log(performance);
+      // @ts-ignore
+      const result = await performance.measureUserAgentSpecificMemory();
+      console.log(result);
+    }
+    run();
     window.addEventListener('myCustomEvent', (event) => {
       console.log(event);
     });
